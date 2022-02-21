@@ -24,11 +24,10 @@ struct CryptoListView: View {
         NavigationView {
             List(cryptoList, id: \.id){ cryptoItem in
                 NavigationLink{
-                    
+                    CryptoDetailsView()
                 } label: {
                     CryptoItemView(uiCrypto: cryptoItem)
                 }
-                
             }
             .navigationTitle("Swiftcoin")
         }

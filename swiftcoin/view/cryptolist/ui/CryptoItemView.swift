@@ -36,7 +36,7 @@ struct CryptoItemView: View {
                         Text("Price: ")
                             .foregroundColor(.secondary)
                         Text(uiCrypto.price)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.primary)
                     }
                 }
                 .padding()
