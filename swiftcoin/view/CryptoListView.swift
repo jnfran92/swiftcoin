@@ -8,47 +8,29 @@
 import SwiftUI
 
 struct CryptoListView: View {
+    
+    
+    var cryptoList = [
+        UICrypto(id: 0, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
+        UICrypto(id: 1, name: "Ethreum", symbol: "ETH", price: "$200.00"),
+        UICrypto(id: 2, name: "LiteCoin", symbol: "LTC", price: "$300.00"),
+        UICrypto(id: 3, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
+        UICrypto(id: 4, name: "Ethreum", symbol: "ETH", price: "$200.00"),
+        UICrypto(id: 5, name: "LiteCoin", symbol: "LTC", price: "$300.00")
+    ]
+    
+    
     var body: some View {
-        VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Swiftcoin")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.yellow)
-                    Text("Crypto currencies matters!")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+        NavigationView {
+            List(cryptoList, id: \.id){ cryptoItem in
+                NavigationLink{
+                    
+                } label: {
+                    CryptoItemView(uiCrypto: cryptoItem)
                 }
-                Spacer()
-            }.padding()
-            
-            HStack(alignment: .center) {
-                Image("bitcoin")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 70, height: 70)
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle().stroke(.yellow, lineWidth: 4)
-                    }
-
-                VStack(alignment: .leading) {
-                    Text("Bitcoin")
-                        .font(.title2)
-                        .fontWeight(.regular)
-                        .foregroundColor(Color.blue)
-                    HStack{
-                        Text("Price: ")
-                            .fontWeight(.medium)
-                        Text("$10.00")
-                    }
-                }
-                .padding()
-                Spacer()
-            }.padding()
-            Divider()
-            Spacer()
+                
+            }
+            .navigationTitle("Swiftcoin")
         }
     }
 }

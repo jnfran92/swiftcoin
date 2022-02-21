@@ -12,31 +12,32 @@ struct CryptoItemView: View {
     var uiCrypto: UICrypto
     
     var body: some View {
-        HStack(alignment: .center) {
-            Image("bitcoin")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 70, height: 70)
-                .clipShape(Circle())
-                .overlay {
-                    Circle().stroke(.yellow, lineWidth: 4)
-                }
+        VStack{
+            HStack(alignment: .center) {
+                Image("bitcoin")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 70, height: 70)
+                    .clipShape(Circle())
+                    .overlay {
+                        Circle().stroke(.yellow, lineWidth: 4)
+                    }
 
-            VStack(alignment: .leading) {
-                Text(uiCrypto.name)
-                    .font(.title2)
-                    .fontWeight(.regular)
-                    .foregroundColor(Color.blue)
-                HStack{
-                    Text("Price: ")
-                        .fontWeight(.medium)
-                    Text(uiCrypto.price)
+                VStack(alignment: .leading) {
+                    Text(uiCrypto.name)
+                        .font(.title2)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color.blue)
+                    HStack{
+                        Text("Price: ")
+                            .fontWeight(.medium)
+                        Text(uiCrypto.price)
+                    }
                 }
-            }
-            .padding()
-            Spacer()
-        }.padding()
-        Divider()
+                .padding()
+                Spacer()
+            }.padding(5.0)
+        }
     }
 }
 
