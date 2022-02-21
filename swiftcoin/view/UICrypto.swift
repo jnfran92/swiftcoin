@@ -8,7 +8,8 @@
 import Foundation
 
 struct UICrypto: Hashable, Codable {
-        let id: Int
-        var name: String
-        var symbol: String
+    let id: Int
+    var name: String
+    var symbol: String
+    var price: String
 }
