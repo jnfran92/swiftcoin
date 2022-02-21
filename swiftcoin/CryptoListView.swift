@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CryptoListView.swift
 //  swiftcoin
 //
 //  Created by usuario on 21-02-22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CryptoListView: View {
     var body: some View {
         VStack {
             HStack {
@@ -31,8 +31,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CryptoListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CryptoListView()
     }
 }
