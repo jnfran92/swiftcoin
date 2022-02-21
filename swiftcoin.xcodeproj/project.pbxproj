@@ -14,6 +14,7 @@
 		84597F7E27C3D2B4003E990E /* swiftcoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597F7D27C3D2B4003E990E /* swiftcoinTests.swift */; };
 		84597F8827C3D2B4003E990E /* swiftcoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597F8727C3D2B4003E990E /* swiftcoinUITests.swift */; };
 		84597F8A27C3D2B4003E990E /* swiftcoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597F8927C3D2B4003E990E /* swiftcoinUITestsLaunchTests.swift */; };
+		84597F9727C3D61B003E990E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 84597F9627C3D61B003E990E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		84597F8327C3D2B4003E990E /* swiftcoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftcoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84597F8727C3D2B4003E990E /* swiftcoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftcoinUITests.swift; sourceTree = "<group>"; };
 		84597F8927C3D2B4003E990E /* swiftcoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftcoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84597F9627C3D61B003E990E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		84597F6027C3D2B1003E990E = {
 			isa = PBXGroup;
 			children = (
+				84597F9627C3D61B003E990E /* README.md */,
 				84597F6B27C3D2B1003E990E /* swiftcoin */,
 				84597F7C27C3D2B4003E990E /* swiftcoinTests */,
 				84597F8627C3D2B4003E990E /* swiftcoinUITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84597F9727C3D61B003E990E /* README.md in Resources */,
 				84597F7427C3D2B3003E990E /* Preview Assets.xcassets in Resources */,
 				84597F7127C3D2B3003E990E /* Assets.xcassets in Resources */,
 			);
