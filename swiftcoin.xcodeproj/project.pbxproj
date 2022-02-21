@@ -16,6 +16,7 @@
 		84597F8A27C3D2B4003E990E /* swiftcoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597F8927C3D2B4003E990E /* swiftcoinUITestsLaunchTests.swift */; };
 		84597F9727C3D61B003E990E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 84597F9627C3D61B003E990E /* README.md */; };
 		84597F9927C3E6D3003E990E /* CryptoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597F9827C3E6D3003E990E /* CryptoListView.swift */; };
+		84597FA327C40E8C003E990E /* UICrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597FA227C40E8C003E990E /* UICrypto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		84597F8927C3D2B4003E990E /* swiftcoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftcoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84597F9627C3D61B003E990E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84597F9827C3E6D3003E990E /* CryptoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListView.swift; sourceTree = "<group>"; };
+		84597FA227C40E8C003E990E /* UICrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICrypto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,11 @@
 		84597F6B27C3D2B1003E990E /* swiftcoin */ = {
 			isa = PBXGroup;
 			children = (
+				84597FA127C3EEED003E990E /* view */,
+				84597F9C27C3EE46003E990E /* domain */,
+				84597F9B27C3EE3D003E990E /* data */,
 				84597F6C27C3D2B1003E990E /* swiftcoinApp.swift */,
-				84597F6E27C3D2B1003E990E /* ContentView.swift */,
-				84597F7027C3D2B3003E990E /* Assets.xcassets */,
 				84597F7227C3D2B3003E990E /* Preview Content */,
-				84597F9827C3E6D3003E990E /* CryptoListView.swift */,
 			);
 			path = swiftcoin;
 			sourceTree = "<group>";
@@ -131,6 +133,31 @@
 				84597F8927C3D2B4003E990E /* swiftcoinUITestsLaunchTests.swift */,
 			);
 			path = swiftcoinUITests;
+			sourceTree = "<group>";
+		};
+		84597F9B27C3EE3D003E990E /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		84597F9C27C3EE46003E990E /* domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		84597FA127C3EEED003E990E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				84597F7027C3D2B3003E990E /* Assets.xcassets */,
+				84597F9827C3E6D3003E990E /* CryptoListView.swift */,
+				84597F6E27C3D2B1003E990E /* ContentView.swift */,
+				84597FA227C40E8C003E990E /* UICrypto.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84597FA327C40E8C003E990E /* UICrypto.swift in Sources */,
 				84597F6F27C3D2B1003E990E /* ContentView.swift in Sources */,
 				84597F6D27C3D2B1003E990E /* swiftcoinApp.swift in Sources */,
 				84597F9927C3E6D3003E990E /* CryptoListView.swift in Sources */,
