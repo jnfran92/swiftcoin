@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Swiftcoin")
+                    .font(.title)
+                .foregroundColor(.blue)
+                Text("Crypto currencies matters!")
+            }
+            Spacer()
+        }.padding()
     }
 }
 
