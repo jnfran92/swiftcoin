@@ -1,5 +1,5 @@
 
-# SwiftCoin :computer: :moneybag: 
+# SwiftCoin :bird: :moneybag: 
 
 Crypto matters!
 
