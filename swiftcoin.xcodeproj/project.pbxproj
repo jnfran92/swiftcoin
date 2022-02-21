@@ -155,12 +155,44 @@
 		84597FA127C3EEED003E990E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				84597F9827C3E6D3003E990E /* CryptoListView.swift */,
+				84597FA627C43618003E990E /* cryptolist */,
 				84597F6E27C3D2B1003E990E /* ContentView.swift */,
-				84597FA227C40E8C003E990E /* UICrypto.swift */,
-				84597FA427C41456003E990E /* CryptoItemView.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		84597FA627C43618003E990E /* cryptolist */ = {
+			isa = PBXGroup;
+			children = (
+				84597FA827C43628003E990E /* ui */,
+				84597FA727C43622003E990E /* presentation */,
+			);
+			path = cryptolist;
+			sourceTree = "<group>";
+		};
+		84597FA727C43622003E990E /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				84597FA927C43640003E990E /* model */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		84597FA827C43628003E990E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				84597FA427C41456003E990E /* CryptoItemView.swift */,
+				84597F9827C3E6D3003E990E /* CryptoListView.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		84597FA927C43640003E990E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				84597FA227C40E8C003E990E /* UICrypto.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
