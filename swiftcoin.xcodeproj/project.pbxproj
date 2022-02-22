@@ -19,6 +19,8 @@
 		84597FA327C40E8C003E990E /* UICrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597FA227C40E8C003E990E /* UICrypto.swift */; };
 		84597FA527C41456003E990E /* CryptoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597FA427C41456003E990E /* CryptoItemView.swift */; };
 		84597FAE27C439A7003E990E /* CryptoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597FAD27C439A7003E990E /* CryptoDetailsView.swift */; };
+		846963E527C570980031CF24 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E427C570980031CF24 /* LoadingView.swift */; };
+		846963E727C5713D0031CF24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E627C5713D0031CF24 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		84597FA227C40E8C003E990E /* UICrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICrypto.swift; sourceTree = "<group>"; };
 		84597FA427C41456003E990E /* CryptoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoItemView.swift; sourceTree = "<group>"; };
 		84597FAD27C439A7003E990E /* CryptoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsView.swift; sourceTree = "<group>"; };
+		846963E427C570980031CF24 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		846963E627C5713D0031CF24 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,8 @@
 		846963E227C56C200031CF24 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				846963E427C570980031CF24 /* LoadingView.swift */,
+				846963E627C5713D0031CF24 /* ErrorView.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -366,7 +372,9 @@
 				84597F6F27C3D2B1003E990E /* ContentView.swift in Sources */,
 				84597F6D27C3D2B1003E990E /* swiftcoinApp.swift in Sources */,
 				84597FA527C41456003E990E /* CryptoItemView.swift in Sources */,
+				846963E527C570980031CF24 /* LoadingView.swift in Sources */,
 				84597F9927C3E6D3003E990E /* CryptoListView.swift in Sources */,
+				846963E727C5713D0031CF24 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

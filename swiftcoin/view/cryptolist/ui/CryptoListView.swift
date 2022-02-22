@@ -39,36 +39,12 @@ struct CryptoListView: View {
                 }
             }
             
-            if(loadingViewVisibility){
-                VStack {
-                    ProgressView()
-                    Text("Loading...")
-                }
-            }
-            
-            if(errorViewVisibility){
-                VStack {
-                    Image("bitcoin")
-                        .resizable()
-                        .clipShape(Circle())
-                        .overlay {
-                            Circle().stroke(.yellow, lineWidth: 5)
-                        }
-                        .shadow(radius: 5)
-                        .frame(width: 130, height: 130)
-                    Text("Swiftcoin")
-                        .font(.title)
-                        .foregroundColor(Color.yellow)
-                    Text("Ha ocurrido un error, reintenta mas tarde...")
-                    Button("Reintentar") {
-                        
-                    }
-                    .padding()
-                }
-            }
+            LoadingView(visibility: loadingViewVisibility)
+            ErrorView(visibility: errorViewVisibility)
         }
     }
 }
+
 
 struct CryptoListView_Previews: PreviewProvider {
     static var previews: some View {
