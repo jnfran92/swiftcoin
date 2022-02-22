@@ -9,45 +9,65 @@ import SwiftUI
 
 struct CryptoListView: View {
     
-    
-    var cryptoList = [
-        UICrypto(id: 0, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
-        UICrypto(id: 1, name: "Ethreum", symbol: "ETH", price: "$200.00"),
-        UICrypto(id: 2, name: "LiteCoin", symbol: "LTC", price: "$300.00"),
-        UICrypto(id: 3, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
-        UICrypto(id: 4, name: "Ethreum", symbol: "ETH", price: "$200.00"),
-        UICrypto(id: 5, name: "LiteCoin", symbol: "LTC", price: "$300.00")
-    ]
-    
-    
-    var dataViewVisibility = false
+    var dataViewVisibility = true
     var loadingViewVisibility = false
-    var errorViewVisibility = true
+    var errorViewVisibility = false
+    
+    @ObservedObject var viewModel: CryptoListViewModel
     
     var body: some View {
-        VStack{
-            if(dataViewVisibility){
-                NavigationView {
-                    List(cryptoList, id: \.id){ cryptoItem in
-                        NavigationLink{
-                            CryptoDetailsView()
-                        } label: {
-                            CryptoItemView(uiCrypto: cryptoItem)
-                        }
-                    }
-                    .navigationTitle("Swiftcoin")
-                }
+//        VStack{
+            
+            switch viewModel.uiState {
+            case .defaultView:
+//                print(".defaultView")
+                LoadingView(visibility: loadingViewVisibility)
+            case .showErrorView:
+//                print(".errorView")
+                LoadingView(visibility: loadingViewVisibility)
+            case .showDataView(let data):
+//                print(".showDataView")
+                LoadingView(visibility: loadingViewVisibility)
+            case .showLoadingView:
+//                print(".showLoadingView")
+                LoadingView(visibility: loadingViewVisibility)
             }
             
+//            if(dataViewVisibility){
+//                NavigationView {
+//                    List(cryptoList, id: \.id){ cryptoItem in
+//                        NavigationLink{
+//                            CryptoDetailsView()
+//                        } label: {
+//                            CryptoItemView(uiCrypto: cryptoItem)
+//                        }
+//                    }
+//                    .navigationTitle("Swiftcoin")
+//                }
+//            }
+            
             LoadingView(visibility: loadingViewVisibility)
-            ErrorView(visibility: errorViewVisibility)
-        }
+//            ErrorView(visibility: errorViewVisibility)
+//        }
     }
 }
 
 
+//func showDataView(cryptoList: [UICrypto]) -> NavigationView<Content: View>{
+//    return NavigationView {
+//        List(cryptoList, id: \.id){ cryptoItem in
+//            NavigationLink{
+//                CryptoDetailsView()
+//            } label: {
+//                CryptoItemView(uiCrypto: cryptoItem)
+//            }
+//        }
+//        .navigationTitle("Swiftcoin")
+//    }
+//}
+
 struct CryptoListView_Previews: PreviewProvider {
     static var previews: some View {
-        CryptoListView()
+        CryptoListView(viewModel: CryptoListViewModel())
     }
 }

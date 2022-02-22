@@ -21,6 +21,7 @@
 		84597FAE27C439A7003E990E /* CryptoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84597FAD27C439A7003E990E /* CryptoDetailsView.swift */; };
 		846963E527C570980031CF24 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E427C570980031CF24 /* LoadingView.swift */; };
 		846963E727C5713D0031CF24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E627C5713D0031CF24 /* ErrorView.swift */; };
+		846963E927C57FD20031CF24 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E827C57FD20031CF24 /* CryptoListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		84597FAD27C439A7003E990E /* CryptoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsView.swift; sourceTree = "<group>"; };
 		846963E427C570980031CF24 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		846963E627C5713D0031CF24 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		846963E827C57FD20031CF24 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +183,9 @@
 		84597FA727C43622003E990E /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				846963EA27C5800E0031CF24 /* state */,
 				84597FA927C43640003E990E /* model */,
+				846963E827C57FD20031CF24 /* CryptoListViewModel.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -234,6 +238,13 @@
 				846963E627C5713D0031CF24 /* ErrorView.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		846963EA27C5800E0031CF24 /* state */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = state;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +382,7 @@
 				84597FA327C40E8C003E990E /* UICrypto.swift in Sources */,
 				84597F6F27C3D2B1003E990E /* ContentView.swift in Sources */,
 				84597F6D27C3D2B1003E990E /* swiftcoinApp.swift in Sources */,
+				846963E927C57FD20031CF24 /* CryptoListViewModel.swift in Sources */,
 				84597FA527C41456003E990E /* CryptoItemView.swift in Sources */,
 				846963E527C570980031CF24 /* LoadingView.swift in Sources */,
 				84597F9927C3E6D3003E990E /* CryptoListView.swift in Sources */,
