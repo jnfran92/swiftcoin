@@ -20,16 +20,52 @@ struct CryptoListView: View {
     ]
     
     
+    var dataViewVisibility = false
+    var loadingViewVisibility = false
+    var errorViewVisibility = true
+    
     var body: some View {
-        NavigationView {
-            List(cryptoList, id: \.id){ cryptoItem in
-                NavigationLink{
-                    CryptoDetailsView()
-                } label: {
-                    CryptoItemView(uiCrypto: cryptoItem)
+        VStack{
+            if(dataViewVisibility){
+                NavigationView {
+                    List(cryptoList, id: \.id){ cryptoItem in
+                        NavigationLink{
+                            CryptoDetailsView()
+                        } label: {
+                            CryptoItemView(uiCrypto: cryptoItem)
+                        }
+                    }
+                    .navigationTitle("Swiftcoin")
                 }
             }
-            .navigationTitle("Swiftcoin")
+            
+            if(loadingViewVisibility){
+                VStack {
+                    ProgressView()
+                    Text("Loading...")
+                }
+            }
+            
+            if(errorViewVisibility){
+                VStack {
+                    Image("bitcoin")
+                        .resizable()
+                        .clipShape(Circle())
+                        .overlay {
+                            Circle().stroke(.yellow, lineWidth: 5)
+                        }
+                        .shadow(radius: 5)
+                        .frame(width: 130, height: 130)
+                    Text("Swiftcoin")
+                        .font(.title)
+                        .foregroundColor(Color.yellow)
+                    Text("Ha ocurrido un error, reintenta mas tarde...")
+                    Button("Reintentar") {
+                        
+                    }
+                    .padding()
+                }
+            }
         }
     }
 }

@@ -10,15 +10,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Swiftcoin")
-                        .font(.title)
-                    .foregroundColor(.blue)
-                    Text("Crypto currencies matters!")
-                }
-                Spacer()
-            }.padding()
             
             Image("bitcoin")
                 .clipShape(Circle())
@@ -26,6 +17,18 @@ struct ContentView: View {
                     Circle().stroke(.yellow, lineWidth: 10)
                 }
                 .shadow(radius: 7)
+            
+            HStack {
+                VStack(alignment: .center) {
+                    Text("Swiftcoin")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.yellow)
+                    Text("Crypto currencies matters!")
+                }
+            }.padding()
+            
+
             
         }
     }

@@ -17,7 +17,6 @@ struct CryptoItemView: View {
                 
                 Circle()
                     .foregroundColor(Color.yellow)
-                //                    .resizable()
                     .scaledToFit()
                     .frame(width: 70, height: 70)
                     .clipShape(Circle())

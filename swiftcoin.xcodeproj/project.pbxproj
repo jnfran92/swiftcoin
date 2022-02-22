@@ -157,6 +157,7 @@
 		84597FA127C3EEED003E990E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				846963E227C56C200031CF24 /* utils */,
 				84597FAA27C43909003E990E /* cryptodetails */,
 				84597FA627C43618003E990E /* cryptolist */,
 				84597F6E27C3D2B1003E990E /* ContentView.swift */,
@@ -220,6 +221,13 @@
 			children = (
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		846963E227C56C200031CF24 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
