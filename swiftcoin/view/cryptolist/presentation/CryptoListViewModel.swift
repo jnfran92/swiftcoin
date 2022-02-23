@@ -27,10 +27,15 @@ class CryptoListViewModel: ObservableObject {
     
     @Published var uiState: CryptoListUIState = .defaultView
     
+    init() {
+        print("CryptoListViewModel init")
+        loadData()
+    }
+    
     func loadData(){
         print("loadData START")
         self.uiState = .defaultView
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             print("loadData DONE")
             self.uiState = .showDataView(self.cryptoList)
         }

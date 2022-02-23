@@ -12,6 +12,7 @@ struct swiftcoinApp: App {
     var body: some Scene {
         WindowGroup {
             CryptoListView(viewModel: CryptoListViewModel())
+//            CryptoListView()
         }
     }
 }

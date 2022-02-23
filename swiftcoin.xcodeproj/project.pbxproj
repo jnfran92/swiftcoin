@@ -183,7 +183,7 @@
 		84597FA727C43622003E990E /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				846963EA27C5800E0031CF24 /* state */,
+				846963EA27C5800E0031CF24 /* uistate */,
 				84597FA927C43640003E990E /* model */,
 				846963E827C57FD20031CF24 /* CryptoListViewModel.swift */,
 			);
@@ -240,11 +240,11 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		846963EA27C5800E0031CF24 /* state */ = {
+		846963EA27C5800E0031CF24 /* uistate */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = state;
+			path = uistate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
