@@ -22,6 +22,8 @@
 		846963E727C5713D0031CF24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E627C5713D0031CF24 /* ErrorView.swift */; };
 		846963E927C57FD20031CF24 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E827C57FD20031CF24 /* CryptoListViewModel.swift */; };
 		846963ED27C6C14B0031CF24 /* CryptoListUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963EC27C6C14B0031CF24 /* CryptoListUIState.swift */; };
+		846963EF27C6D1620031CF24 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 846963EE27C6D1620031CF24 /* Podfile */; };
+		8F669478DC4DF098CF883896 /* Pods_swiftcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC3D7048C21E8D9545F4D45 /* Pods_swiftcoin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BC3D7048C21E8D9545F4D45 /* Pods_swiftcoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftcoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2363B0EB4728BF0A6A54DF9A /* Pods-swiftcoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftcoin.release.xcconfig"; path = "Target Support Files/Pods-swiftcoin/Pods-swiftcoin.release.xcconfig"; sourceTree = "<group>"; };
+		4E71E8B74735BE4766F79BCE /* Pods-swiftcoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftcoin.debug.xcconfig"; path = "Target Support Files/Pods-swiftcoin/Pods-swiftcoin.debug.xcconfig"; sourceTree = "<group>"; };
 		84597F6927C3D2B1003E990E /* swiftcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84597F6C27C3D2B1003E990E /* swiftcoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftcoinApp.swift; sourceTree = "<group>"; };
 		84597F7027C3D2B3003E990E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		846963E827C57FD20031CF24 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 		846963EB27C6BFD70031CF24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		846963EC27C6C14B0031CF24 /* CryptoListUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListUIState.swift; sourceTree = "<group>"; };
+		846963EE27C6D1620031CF24 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F669478DC4DF098CF883896 /* Pods_swiftcoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,14 +95,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BD7538CF0DD386CF37FCCC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BC3D7048C21E8D9545F4D45 /* Pods_swiftcoin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B25CDEEC12F58257A3C8EDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E71E8B74735BE4766F79BCE /* Pods-swiftcoin.debug.xcconfig */,
+				2363B0EB4728BF0A6A54DF9A /* Pods-swiftcoin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84597F6027C3D2B1003E990E = {
 			isa = PBXGroup;
 			children = (
+				846963EE27C6D1620031CF24 /* Podfile */,
 				84597F9627C3D61B003E990E /* README.md */,
 				84597F6B27C3D2B1003E990E /* swiftcoin */,
 				84597F7C27C3D2B4003E990E /* swiftcoinTests */,
 				84597F8627C3D2B4003E990E /* swiftcoinUITests */,
 				84597F6A27C3D2B1003E990E /* Products */,
+				6B25CDEEC12F58257A3C8EDB /* Pods */,
+				2BD7538CF0DD386CF37FCCC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,9 +284,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84597F8D27C3D2B4003E990E /* Build configuration list for PBXNativeTarget "swiftcoin" */;
 			buildPhases = (
+				815B49C1C541C2409DD7CB00 /* [CP] Check Pods Manifest.lock */,
 				84597F6527C3D2B1003E990E /* Sources */,
 				84597F6627C3D2B1003E990E /* Frameworks */,
 				84597F6727C3D2B1003E990E /* Resources */,
+				DEFFD1E4D9234678F5DD2BDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,6 +385,7 @@
 			files = (
 				84597F9727C3D61B003E990E /* README.md in Resources */,
 				84597F7427C3D2B3003E990E /* Preview Assets.xcassets in Resources */,
+				846963EF27C6D1620031CF24 /* Podfile in Resources */,
 				84597F7127C3D2B3003E990E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +405,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		815B49C1C541C2409DD7CB00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swiftcoin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEFFD1E4D9234678F5DD2BDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftcoin/Pods-swiftcoin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftcoin/Pods-swiftcoin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftcoin/Pods-swiftcoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84597F6527C3D2B1003E990E /* Sources */ = {
@@ -543,6 +616,7 @@
 		};
 		84597F8E27C3D2B4003E990E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71E8B74735BE4766F79BCE /* Pods-swiftcoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -571,6 +645,7 @@
 		};
 		84597F8F27C3D2B4003E990E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2363B0EB4728BF0A6A54DF9A /* Pods-swiftcoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
