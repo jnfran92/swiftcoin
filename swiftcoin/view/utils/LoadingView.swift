@@ -12,6 +12,7 @@ struct LoadingView: View {
     var body: some View {
             VStack {
                 ProgressView()
+                    .padding()
                 Text("Loading...")
             }
     }

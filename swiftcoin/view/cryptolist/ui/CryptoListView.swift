@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CryptoListView: View {
-        
+    
     @ObservedObject var viewModel: CryptoListViewModel
     
     var body: some View {
@@ -25,22 +25,22 @@ struct CryptoListView: View {
             }
         }
     }
-}
-
-struct DataView: View{
     
-    var uiCryptoList: [UICrypto]
-    
-    var body: some View {
-        NavigationView {
-            List(uiCryptoList, id: \.id){ cryptoItem in
-                NavigationLink{
-                    CryptoDetailsView()
-                } label: {
-                    CryptoItemView(uiCrypto: cryptoItem)
+    struct DataView: View{
+        
+        var uiCryptoList: [UICrypto]
+        
+        var body: some View {
+            NavigationView {
+                List(uiCryptoList, id: \.id){ item in
+                    NavigationLink{
+                        CryptoDetailsView(uiCrypto: item)
+                    } label: {
+                        CryptoItemView(uiCrypto: item)
+                    }
                 }
+                .navigationTitle("Swiftcoin")
             }
-            .navigationTitle("Swiftcoin")
         }
     }
 }
