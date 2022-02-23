@@ -17,14 +17,7 @@ class CryptoListViewModel: ObservableObject {
         UICrypto(id: 4, name: "Ethreum", symbol: "ETH", price: "$200.00"),
         UICrypto(id: 5, name: "LiteCoin", symbol: "LTC", price: "$300.00")
     ]
-    
-    enum CryptoListUIState {
-        case defaultView
-        case showLoadingView
-        case showErrorView
-        case showDataView([UICrypto])
-    }
-    
+        
     @Published var uiState: CryptoListUIState = .defaultView
     
     init() {
