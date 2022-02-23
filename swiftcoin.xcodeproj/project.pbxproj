@@ -175,8 +175,8 @@
 		84597FA627C43618003E990E /* cryptolist */ = {
 			isa = PBXGroup;
 			children = (
-				84597FA827C43628003E990E /* ui */,
 				84597FA727C43622003E990E /* presentation */,
+				84597FA827C43628003E990E /* ui */,
 			);
 			path = cryptolist;
 			sourceTree = "<group>";
