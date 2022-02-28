@@ -8,28 +8,35 @@
 import Foundation
 import Alamofire
 
+@MainActor
 class CryptoListViewModel: ObservableObject {
     
     @Published var uiState: CryptoListUIState = .defaultView
     
     init() {
         print("CryptoListViewModel init")
-        loadData()
+        Task{
+            try await loadData()
+        }
     }
     
-    func loadData(){
+    deinit {
+        print("deinit")
+    }
+    
+    func loadData() async throws{
         print("loadData START")
-        self.uiState = .defaultView
-        Task{
-            print("load request")
-            let request = AF.request("https://swapi.dev/api/films")
-            request.responseJSON { (data) in
-                  print( "DATA JSON ALAMOFIRE: \(data)")
-                }
-            print("request quequed")
-            try await self.uiState = .showDataView(getCryptosData())
-            print("request quequed 2 ")
+        do{
+            self.uiState = .showLoadingView
+            let data = try await getCryptosData()
+            self.uiState = .showDataView(data)
+        }catch{
+            self.uiState = .showErrorView
         }
+    }
+    
+    enum ViewModelError: Error {
+        case runtimeError(String)
     }
     
     func getCryptosData() async throws -> [UICrypto]{
@@ -43,14 +50,38 @@ class CryptoListViewModel: ObservableObject {
             UICrypto(id: 5, name: "LiteCoin", symbol: "LTC", price: "$300.00")
         ]
         try await Task.sleep(nanoseconds: 2 * 1_000_000_000)
-        
-//        let request = AF.request("https://swapi.dev/api/films")
-//        request.responseJSON { (data) in
-//              print( "DATA JSON ALAMOFIRE: \(data)")
-//            }
-        
-        
-        return cryptoList
+        throw ViewModelError.runtimeError("error getting data")
+        //        return cryptoList
     }
     
+    func loadDataAsync() async {
+        do {
+            print("loadDataAsync()")
+            let data = try await self.getDataFromCloud()
+            print("Data:")
+            print(data)
+        }catch {
+            print("Error \(error)")
+        }
+    }
+    
+    func getDataFromCloud() async throws -> Data {
+        try await withUnsafeThrowingContinuation { continuation in
+            AF.request("https://swapi.dev/api/films").responseData { response in
+                if let data = response.data {
+                    continuation.resume(returning: data)
+                    return
+                }
+                if let err = response.error {
+                    continuation.resume(throwing: err)
+                    return
+                }
+                fatalError("should not get here")
+            }
+        }
+    }
+    
+    func cancel(){
+        print("cancel")
+    }
 }
