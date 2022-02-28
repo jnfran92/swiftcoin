@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AFNetworking
 
 struct CryptoItemView: View {
     
