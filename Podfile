@@ -7,6 +7,7 @@ target 'swiftcoin' do
 
   # Pods for swiftcoin
   pod 'AFNetworking', '~> 3.0'
+  pod 'Alamofire', '~> 5.5'
 
   target 'swiftcoinTests' do
     inherit! :search_paths
