@@ -28,8 +28,8 @@ class CryptoListViewModel: ObservableObject {
         print("loadData START")
         do{
             self.uiState = .showLoadingView
-            let data = try await getDataFromCloud().data.enumerated().map{ (idx, it) -> UICrypto in
-                UICrypto(id: idx, name: it.name, symbol: it.symbol, price: "0.0")
+            let data = try await getDataFromCloud().data!.enumerated().map{ (idx, it) -> UICrypto in
+                UICrypto(id: it.cryptoId ?? 0, name: it.name ?? "", symbol: it.symbol ?? "", price: "\(it.quote?.usd?.price ?? 0.0)")
             }
             print("data 2 \(data)")
             self.uiState = .showDataView(data)

@@ -8,7 +8,7 @@
 import Foundation
 
 struct CryptoApiRequestStatus: Decodable {
-    let errorCode:Int
+    let errorCode:Int?
     
     enum CodingKeys: String, CodingKey {
       case errorCode = "error_code"

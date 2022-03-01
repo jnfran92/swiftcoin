@@ -23,11 +23,11 @@
 		846963E727C5713D0031CF24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E627C5713D0031CF24 /* ErrorView.swift */; };
 		846963E927C57FD20031CF24 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E827C57FD20031CF24 /* CryptoListViewModel.swift */; };
 		846963ED27C6C14B0031CF24 /* CryptoListUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963EC27C6C14B0031CF24 /* CryptoListUIState.swift */; };
-		84CFD4C427CD966400AF1419 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C327CD966400AF1419 /* Film.swift */; };
-		84CFD4C627CD969800AF1419 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C527CD969800AF1419 /* Films.swift */; };
 		84CFD4C827CE6A5800AF1419 /* CryptoApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C727CE6A5800AF1419 /* CryptoApiRequest.swift */; };
 		84CFD4CA27CE6AD000AF1419 /* CryptoRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C927CE6AD000AF1419 /* CryptoRemote.swift */; };
 		84CFD4CC27CE6B0600AF1419 /* CryptoApiRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CB27CE6B0600AF1419 /* CryptoApiRequestStatus.swift */; };
+		84CFD4CE27CE793C00AF1419 /* QuoteRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CD27CE793C00AF1419 /* QuoteRemote.swift */; };
+		84CFD4D027CE798F00AF1419 /* CurrencyRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CF27CE798F00AF1419 /* CurrencyRemote.swift */; };
 		BD14394B5E797CD2529DFC9E /* Pods_swiftcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBB826AA0135485A98C8D37 /* Pods_swiftcoin.framework */; };
 		CF6A9F85D4B800E196BF39CA /* Pods_swiftcoinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA09EEABB1449F2AADA4437 /* Pods_swiftcoinTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,11 +75,11 @@
 		846963E827C57FD20031CF24 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 		846963EB27C6BFD70031CF24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		846963EC27C6C14B0031CF24 /* CryptoListUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListUIState.swift; sourceTree = "<group>"; };
-		84CFD4C327CD966400AF1419 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
-		84CFD4C527CD969800AF1419 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		84CFD4C727CE6A5800AF1419 /* CryptoApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApiRequest.swift; sourceTree = "<group>"; };
 		84CFD4C927CE6AD000AF1419 /* CryptoRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRemote.swift; sourceTree = "<group>"; };
 		84CFD4CB27CE6B0600AF1419 /* CryptoApiRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApiRequestStatus.swift; sourceTree = "<group>"; };
+		84CFD4CD27CE793C00AF1419 /* QuoteRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRemote.swift; sourceTree = "<group>"; };
+		84CFD4CF27CE798F00AF1419 /* CurrencyRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRemote.swift; sourceTree = "<group>"; };
 		9E09EC378B40EAACA19AC6D7 /* Pods-swiftcoinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftcoinTests.release.xcconfig"; path = "Target Support Files/Pods-swiftcoinTests/Pods-swiftcoinTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2910C6A8442AB51278C4A26 /* Pods-swiftcoinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftcoinTests.debug.xcconfig"; path = "Target Support Files/Pods-swiftcoinTests/Pods-swiftcoinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A38FFE0E6312F1F544C37FCB /* Pods-swiftcoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftcoin.debug.xcconfig"; path = "Target Support Files/Pods-swiftcoin/Pods-swiftcoin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -244,11 +244,11 @@
 			isa = PBXGroup;
 			children = (
 				84597FA227C40E8C003E990E /* UICrypto.swift */,
-				84CFD4C327CD966400AF1419 /* Film.swift */,
-				84CFD4C527CD969800AF1419 /* Films.swift */,
 				84CFD4C727CE6A5800AF1419 /* CryptoApiRequest.swift */,
 				84CFD4C927CE6AD000AF1419 /* CryptoRemote.swift */,
 				84CFD4CB27CE6B0600AF1419 /* CryptoApiRequestStatus.swift */,
+				84CFD4CD27CE793C00AF1419 /* QuoteRemote.swift */,
+				84CFD4CF27CE798F00AF1419 /* CurrencyRemote.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -543,7 +543,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CFD4C627CD969800AF1419 /* Films.swift in Sources */,
 				84597FAE27C439A7003E990E /* CryptoDetailsView.swift in Sources */,
 				846963ED27C6C14B0031CF24 /* CryptoListUIState.swift in Sources */,
 				84597FA327C40E8C003E990E /* UICrypto.swift in Sources */,
@@ -551,12 +550,13 @@
 				84CFD4C827CE6A5800AF1419 /* CryptoApiRequest.swift in Sources */,
 				846963E927C57FD20031CF24 /* CryptoListViewModel.swift in Sources */,
 				84CFD4CC27CE6B0600AF1419 /* CryptoApiRequestStatus.swift in Sources */,
-				84CFD4C427CD966400AF1419 /* Film.swift in Sources */,
 				84597FA527C41456003E990E /* CryptoItemView.swift in Sources */,
 				84CFD4CA27CE6AD000AF1419 /* CryptoRemote.swift in Sources */,
 				846963E527C570980031CF24 /* LoadingView.swift in Sources */,
 				84597F9927C3E6D3003E990E /* CryptoListView.swift in Sources */,
 				846963E727C5713D0031CF24 /* ErrorView.swift in Sources */,
+				84CFD4D027CE798F00AF1419 /* CurrencyRemote.swift in Sources */,
+				84CFD4CE27CE793C00AF1419 /* QuoteRemote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
