@@ -28,11 +28,11 @@ class CryptoListViewModel: ObservableObject {
         print("loadData START")
         do{
             self.uiState = .showLoadingView
-            let data2 = try await getDataFromCloud().all.map { (it) -> UICrypto in
-                UICrypto(id: it.id, name: it.title, symbol: it.openingCrawl, price: it.releaseDate)
+            let data = try await getDataFromCloud().data.enumerated().map{ (idx, it) -> UICrypto in
+                UICrypto(id: idx, name: it.name, symbol: it.symbol, price: "0.0")
             }
-            print("data 2 \(data2)")
-            self.uiState = .showDataView(data2)
+            print("data 2 \(data)")
+            self.uiState = .showDataView(data)
         }catch{
             self.uiState = .showErrorView
         }
@@ -42,16 +42,23 @@ class CryptoListViewModel: ObservableObject {
         case runtimeError(String)
     }
     
+    
+    let headers: HTTPHeaders = [
+        "X-CMC_PRO_API_KEY": "bacdbc14-d7d9-4a0c-8ec5-77351a6be042"
+    ]
+    
 
-    func getDataFromCloud() async throws -> Films {
+    func getDataFromCloud() async throws -> CryptoApiRequest {
         try await withUnsafeThrowingContinuation { continuation in
-            AF.request("https://swapi.dev/api/films").responseDecodable(of: Films.self) { (response) in
+            AF.request("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest", headers: headers).responseDecodable(of: CryptoApiRequest.self) { (response) in
                 if let data = response.value {
+                    print("returning data \(data)")
                     continuation.resume(returning: data)
                     return
                 }
-                if let err = response.error {
-                    continuation.resume(throwing: err)
+                if let error = response.error {
+                    print("returning error \(error)")
+                    continuation.resume(throwing: error)
                     return
                 }
                 fatalError("should not get here")
