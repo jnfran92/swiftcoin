@@ -11,7 +11,9 @@ import SwiftUI
 struct swiftcoinApp: App {
     var body: some Scene {
         WindowGroup {
-            CryptoListView(viewModel: CryptoListViewModel())
+            let getCryptoListUseCase = GetCryptoListUseCase()
+            let cryptoViewModel = CryptoListViewModel(getCryptoListUsCase: getCryptoListUseCase)
+            CryptoListView(viewModel: cryptoViewModel)
         }
     }
 }
