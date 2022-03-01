@@ -28,8 +28,11 @@ class CryptoListViewModel: ObservableObject {
         print("loadData START")
         do{
             self.uiState = .showLoadingView
-            let data = try await getCryptosData()
-            self.uiState = .showDataView(data)
+            let data2 = try await getDataFromCloud().all.map { (it) -> UICrypto in
+                UICrypto(id: it.id, name: it.title, symbol: it.openingCrawl, price: it.releaseDate)
+            }
+            print("data 2 \(data2)")
+            self.uiState = .showDataView(data2)
         }catch{
             self.uiState = .showErrorView
         }
@@ -39,36 +42,11 @@ class CryptoListViewModel: ObservableObject {
         case runtimeError(String)
     }
     
-    func getCryptosData() async throws -> [UICrypto]{
-        print("getCryptosData()")
-        let cryptoList = [
-            UICrypto(id: 0, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
-            UICrypto(id: 1, name: "Ethreum", symbol: "ETH", price: "$200.00"),
-            UICrypto(id: 2, name: "LiteCoin", symbol: "LTC", price: "$300.00"),
-            UICrypto(id: 3, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
-            UICrypto(id: 4, name: "Ethreum", symbol: "ETH", price: "$200.00"),
-            UICrypto(id: 5, name: "LiteCoin", symbol: "LTC", price: "$300.00")
-        ]
-        try await Task.sleep(nanoseconds: 2 * 1_000_000_000)
-        throw ViewModelError.runtimeError("error getting data")
-        //        return cryptoList
-    }
-    
-    func loadDataAsync() async {
-        do {
-            print("loadDataAsync()")
-            let data = try await self.getDataFromCloud()
-            print("Data:")
-            print(data)
-        }catch {
-            print("Error \(error)")
-        }
-    }
-    
-    func getDataFromCloud() async throws -> Data {
+
+    func getDataFromCloud() async throws -> Films {
         try await withUnsafeThrowingContinuation { continuation in
-            AF.request("https://swapi.dev/api/films").responseData { response in
-                if let data = response.data {
+            AF.request("https://swapi.dev/api/films").responseDecodable(of: Films.self) { (response) in
+                if let data = response.value {
                     continuation.resume(returning: data)
                     return
                 }
