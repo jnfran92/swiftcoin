@@ -32,10 +32,7 @@ struct CryptoRemoteRepository {
             }
             .eraseToAnyPublisher()
             .map { cryptoApiRequest -> [DomainCrypto] in
-                let domainCryptoList = cryptoApiRequest.data?.map { crypto in
-                    self.cryptoToDomainMapper.transform(crypto: crypto)
-                } ?? []
-                return domainCryptoList
+                return cryptoApiRequest.data?.map {self.cryptoToDomainMapper.transform(crypto: $0)} ?? []
             }
             .eraseToAnyPublisher()
     }

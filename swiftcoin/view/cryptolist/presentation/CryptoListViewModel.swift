@@ -12,20 +12,24 @@ import SwiftUI
 
 @MainActor
 class CryptoListViewModel: ObservableObject {
-        
+    
     // use cases
     private let getCryptoListUsCase: GetCryptoListUseCase
     
-    // uiState
-    @Published var uiState: CryptoListUIState = .defaultView
+    // mapper
+    private let domainCryptoToUIMapper: DomainCryptoToUIMapper
     
     // disposables
     private var cancellableSet: Set<AnyCancellable> = []
     
+    // uiState
+    @Published var uiState: CryptoListUIState = .defaultView
     
-    init(getCryptoListUsCase: GetCryptoListUseCase) {
+    
+    init(getCryptoListUsCase: GetCryptoListUseCase, domainCryptoToUIMapper: DomainCryptoToUIMapper) {
         print("CryptoListViewModel init")
         self.getCryptoListUsCase = getCryptoListUsCase
+        self.domainCryptoToUIMapper = domainCryptoToUIMapper
         loadData()
     }
     
@@ -33,7 +37,7 @@ class CryptoListViewModel: ObservableObject {
         print("deinit")
     }
     
-   
+    
     func loadData(){
         print("loadData")
         self.uiState = .showLoadingView
@@ -48,9 +52,7 @@ class CryptoListViewModel: ObservableObject {
                     return
                 }
             }, receiveValue: { domainCrypto in
-                let out = domainCrypto.map{ it -> UICrypto in
-                    UICrypto(id: it.id, name: it.name, symbol: it.symbol, price: "\(it.price)")
-                }
+                let out = domainCrypto.map{self.domainCryptoToUIMapper.transform(item: $0)}
                 self.uiState = .showDataView(out)
             })
             .store(in: &cancellableSet)
