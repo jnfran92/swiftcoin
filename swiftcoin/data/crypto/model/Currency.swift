@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CurrencyRemote : Decodable{
+struct Currency : Decodable{
     let price: Double?
     let marketCap: Double?
     let volume24h: Double?

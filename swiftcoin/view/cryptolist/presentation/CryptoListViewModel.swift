@@ -39,6 +39,7 @@ class CryptoListViewModel: ObservableObject {
         self.uiState = .showLoadingView
         self.getCryptoListUsCase
             .invoke()
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure(_):
@@ -46,9 +47,9 @@ class CryptoListViewModel: ObservableObject {
                 case .finished:
                     return
                 }
-            }, receiveValue: { request in
-                let out = request.data!.enumerated().map{ (idx, it) -> UICrypto in
-                    UICrypto(id: it.cryptoId ?? 0, name: it.name ?? "", symbol: it.symbol ?? "", price: "\(it.quote?.usd?.price ?? 0.0)")
+            }, receiveValue: { domainCrypto in
+                let out = domainCrypto.map{ it -> UICrypto in
+                    UICrypto(id: it.id, name: it.name, symbol: it.symbol, price: "\(it.price)")
                 }
                 self.uiState = .showDataView(out)
             })
