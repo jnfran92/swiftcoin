@@ -11,6 +11,6 @@ struct Quote: Decodable{
     let usd: Currency?
     
     enum CodingKeys: String, CodingKey {
-      case usd = "USD"
+        case usd = "USD"
     }
 }

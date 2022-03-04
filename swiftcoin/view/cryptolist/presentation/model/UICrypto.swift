@@ -9,7 +9,13 @@ import Foundation
 
 struct UICrypto: Hashable, Codable {
     let id: Int
-    var name: String
-    var symbol: String
-    var price: String
+    let name: String
+    let symbol: String
+    let slug: String
+    let usdPrice: UICurrency
+    let tags: [String]
+    let cmcRank: Int
+    let circulatingSupply: Double
+    let totalSupply: Double
+    let maxSupply: Double
 }

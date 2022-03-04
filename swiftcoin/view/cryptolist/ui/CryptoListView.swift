@@ -46,14 +46,48 @@ struct CryptoListView: View {
 }
 
 struct CryptoListView_Previews: PreviewProvider {
-    
+        
     static var cryptoList = [
-        UICrypto(id: 0, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
-        UICrypto(id: 1, name: "Ethreum", symbol: "ETH", price: "$200.00"),
-        UICrypto(id: 2, name: "LiteCoin", symbol: "LTC", price: "$300.00"),
-        UICrypto(id: 3, name: "Bticoin Lite", symbol: "BTC", price: "$100.00"),
-        UICrypto(id: 4, name: "Ethreum", symbol: "ETH", price: "$200.00"),
-        UICrypto(id: 5, name: "LiteCoin", symbol: "LTC", price: "$300.00")
+        UICrypto(
+            id: 0,
+            name: "name",
+            symbol: "symbol",
+            slug: "slug",
+            usdPrice: UICurrency(
+                price: 0.0,
+                marketCap:  0.0,
+                volume24h:  0.0,
+                percentChange1h:  0.0,
+                percentChange24h: 0.0,
+                percentChange7d: 0.0,
+                lastUpdated: "12/12/2020"
+            ),
+            tags: ["a","b","c"],
+            cmcRank: 0,
+            circulatingSupply: 0.0,
+            totalSupply: 0.0,
+            maxSupply: 0.0
+        ),
+        UICrypto(
+            id: 0,
+            name: "name",
+            symbol: "symbol",
+            slug: "slug",
+            usdPrice: UICurrency(
+                price: 0.0,
+                marketCap:  0.0,
+                volume24h:  0.0,
+                percentChange1h:  0.0,
+                percentChange24h: 0.0,
+                percentChange7d: 0.0,
+                lastUpdated: "12/12/2020"
+            ),
+            tags: ["a","b","c"],
+            cmcRank: 0,
+            circulatingSupply: 0.0,
+            totalSupply: 0.0,
+            maxSupply: 0.0
+        )
     ]
     
     static var previews: some View {

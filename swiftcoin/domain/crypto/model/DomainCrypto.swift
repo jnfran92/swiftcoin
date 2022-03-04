@@ -9,7 +9,13 @@ import Foundation
 
 struct DomainCrypto: Hashable, Codable {
     let id: Int
-    var name: String
-    var symbol: String
-    var price: Double
+    let name: String
+    let symbol: String
+    let slug: String
+    let usdPrice: DomainCurrency
+    let tags: [String]
+    let cmcRank: Int
+    let circulatingSupply: Double
+    let totalSupply: Double
+    let maxSupply: Double
 }
