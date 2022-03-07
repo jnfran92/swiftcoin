@@ -14,6 +14,12 @@ struct GetCryptoListUseCase {
    let cryptoRemoteRepository: CryptoRemoteRepository
     
     func invoke() -> AnyPublisher<[DomainCrypto], AppError> {
+        
+        let local = CryptoLocalRepository()
+        local.addCrypto()
+        local.getCryptoList()
+        
+        
         return self.cryptoRemoteRepository
             .getLatestCryptoList()
     }
