@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RealmSwift
+
 
 struct CryptoLocalRepository {
     
