@@ -14,20 +14,11 @@ struct PriceChartView: View {
         let x: Double
         let y: Double
     }
-    
-    let data: [Point] = [
-        Point(x: 0.0, y: 0.0),
-        Point(x: 0.1, y: 0.3),
-        Point(x: 0.2, y: 0.6),
-        Point(x: 0.3, y: 0.8),
-        Point(x: 0.4, y: 0.9),
-        Point(x: 0.5, y: 0.9),
-        Point(x: 0.6, y: 0.9),
-        Point(x: 0.7, y: 0.9),
-        Point(x: 0.8, y: 1.0),
-        Point(x: 0.9, y: 1.0),
-        Point(x: 1.0, y: 1.0),
-    ]
+        
+    let data: [Point] = (1...100).enumerated().map { (idx,it) in
+        Point(x: Double(idx)/100.0,
+              y: (Double(idx)/100.0)*(Double(idx)/100.0))
+    }
     
     var body: some View {
         GeometryReader { reader in
