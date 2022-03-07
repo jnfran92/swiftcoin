@@ -15,9 +15,9 @@ struct PriceChartView: View {
         let y: Double
     }
         
-    let data: [Point] = (1...100).enumerated().map { (idx,it) in
-        Point(x: Double(idx)/100.0,
-              y: (Double(idx)/100.0)*(Double(idx)/100.0))
+    let data: [Point] = (1...20).enumerated().map { (idx,it) in
+        Point(x: Double(idx)/20.0,
+              y: (Double(idx)/20.0)*(Double(idx)/20.0))
     }
     
     var body: some View {
@@ -42,12 +42,12 @@ struct PriceChartView: View {
                     )
                 }
             }.stroke(lineWidth: 2.0)
-                .foregroundColor(.black)
+                .foregroundColor(.yellow)
             
             ForEach(data, id: \.id){ point in
                 Circle()
-                    .fill(.red)
-                    .frame(width: 10, height: 10)
+                    .fill(.blue)
+                    .frame(width: 7, height: 7)
                     .position(x: width * point.x,
                               y: height * (1.0 - point.y))
             }

@@ -17,6 +17,7 @@ struct CryptoDetailsView: View {
             DetailsRowView(title: "Symbol", icon: "cube.fill", content: self.uiCrypto.symbol)
             DetailsRowView(title: "Slug", icon: "lightbulb", content: self.uiCrypto.name)
             DetailsRowView(title: "Price", icon: "dollarsign.square.fill", content: "\(self.uiCrypto.usdPrice.price)")
+            PriceChartView()
             Spacer()
         }.navigationTitle(uiCrypto.name)
     }
