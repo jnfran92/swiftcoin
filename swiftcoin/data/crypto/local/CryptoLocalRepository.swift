@@ -7,18 +7,22 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 
 
 struct CryptoLocalRepository {
     
     let localRealm = try! Realm()
     
+    init(){
+        print("init Local Repo")
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+    }
     
     func addCrypto() {
         print("addCrypto")
-        let item = LocalCrypto(
-        name: "Bit", symbol: "BT", slug: "BT IS Best"
-        )
+        let item = LocalCrypto()
+        item.name = "Bitcoin2"
         try! localRealm.write({
             localRealm.add(item)
         })
@@ -28,8 +32,7 @@ struct CryptoLocalRepository {
     func getCryptoList(){
         print("getCryptoList")
         let items = localRealm.objects(LocalCrypto.self)
+//        let data = items.
         print("getCryptoList items \(items)")
     }
-    
-
 }
