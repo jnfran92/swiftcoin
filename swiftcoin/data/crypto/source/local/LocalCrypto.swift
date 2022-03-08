@@ -15,7 +15,7 @@ class LocalCrypto: Object {
     @Persisted var name: String
     @Persisted var symbol: String
     @Persisted var slug: String
-//    @Persisted let quote: Quote?
+    @Persisted var usdPrice: LocalPrice
     @Persisted var tags: List<String>
     @Persisted var cmcRank: Int
     @Persisted var circulatingSupply: Double

@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import Combine
 
-struct CryptoRemoteRepository {
+struct CryptoRemoteSource {
     
     let cryptoToDomainMapper: CryptoToDomainMapper
     

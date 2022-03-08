@@ -10,7 +10,7 @@ import RealmSwift
 import UIKit
 
 
-struct CryptoLocalRepository {
+struct CryptoLocalSource {
     
     let localRealm = try! Realm()
     
