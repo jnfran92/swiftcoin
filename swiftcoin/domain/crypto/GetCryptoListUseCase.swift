@@ -11,11 +11,11 @@ import Combine
 
 struct GetCryptoListUseCase {
     
-   let cryptoRemoteRepository: CryptoRemoteRepository
+   let cryptoRemoteRepository: CryptoRemoteSource
     
     func invoke() -> AnyPublisher<[DomainCrypto], AppError> {
         
-        let local = CryptoLocalRepository()
+        let local = CryptoLocalSource()
         local.addCrypto()
         local.getCryptoList()
         

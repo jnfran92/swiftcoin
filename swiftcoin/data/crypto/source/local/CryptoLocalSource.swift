@@ -12,7 +12,7 @@ import UIKit
 
 struct CryptoLocalSource {
     
-    let localRealm = try! Realm()
+    let realm = try! Realm()
     
     init(){
         print("init Local Repo")
@@ -23,15 +23,15 @@ struct CryptoLocalSource {
         print("addCrypto")
         let item = LocalCrypto()
         item.name = "Bitcoin2"
-        try! localRealm.write({
-            localRealm.add(item)
+        try! realm.write({
+            realm.add(item)
         })
     }
     
     
     func getCryptoList(){
         print("getCryptoList")
-        let items = localRealm.objects(LocalCrypto.self)
+        let items = realm.objects(LocalCrypto.self)
 //        let data = items.
         print("getCryptoList items \(items)")
     }

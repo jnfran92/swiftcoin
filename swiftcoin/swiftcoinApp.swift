@@ -15,8 +15,8 @@ struct swiftcoinApp: App {
             let domainCurrencyToUIMapper = DomainCurrencyToUIMapper()
             let domainCryptoToUIMapper = DomainCryptoToUIMapper(domainCurrencyToUIMapper: domainCurrencyToUIMapper)
             let cryptoToDomainMapper = CryptoToDomainMapper(currencyToDomainMapper: currencyToDomainMapper)
-            let cryptoRemoteRepository = CryptoRemoteRepository(cryptoToDomainMapper: cryptoToDomainMapper)
-            let getCryptoListUseCase = GetCryptoListUseCase(cryptoRemoteRepository: cryptoRemoteRepository)
+            let cryptoRemoteSource = CryptoRemoteSource(cryptoToDomainMapper: cryptoToDomainMapper)
+            let getCryptoListUseCase = GetCryptoListUseCase(cryptoRemoteRepository: cryptoRemoteSource)
             let cryptoViewModel = CryptoListViewModel(getCryptoListUsCase: getCryptoListUseCase, domainCryptoToUIMapper: domainCryptoToUIMapper)
             CryptoListView(viewModel: cryptoViewModel)
         }
