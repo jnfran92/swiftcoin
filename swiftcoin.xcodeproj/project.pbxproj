@@ -417,9 +417,8 @@
 		84EFFF9727D6BE0900D4FDEC /* local */ = {
 			isa = PBXGroup;
 			children = (
+				84EFFFAE27D8F19100D4FDEC /* model */,
 				84CFD4E127D15B1D00AF1419 /* CryptoLocalSource.swift */,
-				84EFFF9827D6BE2400D4FDEC /* LocalCrypto.swift */,
-				84EFFF9C27D7B2D500D4FDEC /* LocalPrice.swift */,
 			);
 			path = local;
 			sourceTree = "<group>";
@@ -436,9 +435,9 @@
 		84EFFF9F27D7B3E600D4FDEC /* remote */ = {
 			isa = PBXGroup;
 			children = (
+				84EFFFA027D7B40800D4FDEC /* model */,
 				84EFFFA927D8E56200D4FDEC /* mapper */,
 				84CFD4DB27D15A0800AF1419 /* CryptoRemoteSource.swift */,
-				84EFFFA027D7B40800D4FDEC /* model */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -461,6 +460,15 @@
 				84CFD4EC27D29AD700AF1419 /* RemoteCurrencyToDataMapper.swift */,
 			);
 			path = mapper;
+			sourceTree = "<group>";
+		};
+		84EFFFAE27D8F19100D4FDEC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				84EFFF9827D6BE2400D4FDEC /* LocalCrypto.swift */,
+				84EFFF9C27D7B2D500D4FDEC /* LocalPrice.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		84F26C649FB486D655574302 /* Frameworks */ = {
