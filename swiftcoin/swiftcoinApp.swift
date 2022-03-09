@@ -11,16 +11,25 @@ import SwiftUI
 struct swiftcoinApp: App {
     var body: some Scene {
         WindowGroup {
-            let currencyToDomainMapper = CurrencyToDomainMapper()
             let domainCurrencyToUIMapper = DomainCurrencyToUIMapper()
             let domainCryptoToUIMapper = DomainCryptoToUIMapper(domainCurrencyToUIMapper: domainCurrencyToUIMapper)
-            let cryptoToDomainMapper = CryptoToDomainMapper(currencyToDomainMapper: currencyToDomainMapper)
             
             
+            let remoteCurrencyToDataMapper = RemoteCurrencyToDataMapper()
+            let remoteCryptoToDataMapper = RemoteCryptoToDataMapper(remoteCurrencyToDataMapper: remoteCurrencyToDataMapper)
             
             
-            let cryptoRemoteSource = CryptoRemoteSource(cryptoToDomainMapper: cryptoToDomainMapper)
-            let getCryptoListUseCase = GetCryptoListUseCase(cryptoRemoteRepository: cryptoRemoteSource)
+            let cryptoRemoteSource = CryptoRemoteSource(remoteCryptoToDataMapper: remoteCryptoToDataMapper)
+            
+            let dataPriceToDomainMapper = DataPriceToDomainMapper()
+            let dataCryptoToDomainMapper = DataCryptoToDomainMapper(dataPriceToDomainMapper: dataPriceToDomainMapper)
+            
+            let cryptoRepository = CryptoRepository(
+                cryptoRemoteSource: cryptoRemoteSource,
+                dataCryptoToDomainMapper: dataCryptoToDomainMapper)
+            
+            let getCryptoListUseCase = GetCryptoListUseCase(cryptoRepository: cryptoRepository)
+            
             let cryptoViewModel = CryptoListViewModel(getCryptoListUsCase: getCryptoListUseCase, domainCryptoToUIMapper: domainCryptoToUIMapper)
             CryptoListView(viewModel: cryptoViewModel)
         }

@@ -1,16 +1,16 @@
 //
-//  DomainCurrencyToUIMapper.swift
+//  DataPriceToDomainMapper.swift
 //  swiftcoin
 //
-//  Created by usuario on 04-03-22.
+//  Created by usuario on 09-03-22.
 //
 
 import Foundation
 
-struct DomainCurrencyToUIMapper {
+struct DataPriceToDomainMapper{
     
-    func transform(item: DomainPrice) -> UICurrency{
-        return UICurrency(
+    func transform(item: DataPrice) -> DomainPrice{
+        return DomainPrice(
             price: item.price,
             marketCap: item.marketCap,
             volume24h: item.volume24h,

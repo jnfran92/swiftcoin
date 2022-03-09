@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct DomainCurrency: Hashable, Codable {
+struct DomainPrice: Hashable, Codable {
     let price: Double
     let marketCap: Double
     let volume24h: Double

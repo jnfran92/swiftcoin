@@ -11,12 +11,12 @@ import Combine
 
 struct CryptoRemoteSource {
     
-    let cryptoToDomainMapper: CryptoToDomainMapper
+    let remoteCryptoToDataMapper: RemoteCryptoToDataMapper
     
     let headers: HTTPHeaders = ["X-CMC_PRO_API_KEY": "bacdbc14-d7d9-4a0c-8ec5-77351a6be042"]
     let url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
     
-    func getLatestCryptoList() -> AnyPublisher<[DomainCrypto], AppError> {
+    func getLatestCryptoList() -> AnyPublisher<[DataCrypto], AppError> {
         return AF.request(url, headers: headers)
             .validate()
             .publishDecodable(type: RemoteApiRequest.self)
@@ -31,8 +31,8 @@ struct CryptoRemoteSource {
                 AppError.dataError("error")
             }
             .eraseToAnyPublisher()
-            .map { cryptoApiRequest -> [DomainCrypto] in
-                return cryptoApiRequest.data?.map {self.cryptoToDomainMapper.transform(item: $0)} ?? []
+            .map { cryptoApiRequest -> [DataCrypto] in
+                return cryptoApiRequest.data?.map {self.remoteCryptoToDataMapper.transform(item: $0)} ?? []
             }
             .eraseToAnyPublisher()
     }

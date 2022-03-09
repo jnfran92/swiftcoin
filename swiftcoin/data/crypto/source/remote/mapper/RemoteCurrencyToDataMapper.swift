@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct CurrencyToDomainMapper {
+struct RemoteCurrencyToDataMapper {
     
-    func transform(item: RemoteCurrency?) -> DomainCurrency{
+    func transform(item: RemoteCurrency?) -> DataPrice{
         if let itemNotNull = item{
-            return DomainCurrency(
+            return DataPrice(
                 price: itemNotNull.price ?? 0.0,
                 marketCap: itemNotNull.marketCap ?? 0.0,
                 volume24h: itemNotNull.volume24h ?? 0.0,
@@ -21,7 +21,7 @@ struct CurrencyToDomainMapper {
                 lastUpdated: itemNotNull.lastUpdated ?? ""
             )
         }else{
-            return DomainCurrency(
+            return DataPrice(
                 price: 0.0,
                 marketCap: 0.0,
                 volume24h: 0.0,

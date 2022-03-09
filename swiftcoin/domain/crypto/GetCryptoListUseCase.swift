@@ -12,7 +12,7 @@ import RealmSwift
 
 struct GetCryptoListUseCase {
     
-    let cryptoRemoteRepository: CryptoRemoteSource
+    let cryptoRepository: CryptoRepository
     let realm = try! Realm()
     
     func invoke() -> AnyPublisher<[DomainCrypto], AppError> {
@@ -23,7 +23,7 @@ struct GetCryptoListUseCase {
         local.getCryptoList()
         
         
-        return self.cryptoRemoteRepository
-            .getLatestCryptoList()
+        return self.cryptoRepository
+            .getCryptoList()
     }
 }

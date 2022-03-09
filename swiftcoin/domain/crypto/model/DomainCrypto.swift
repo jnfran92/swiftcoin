@@ -12,7 +12,7 @@ struct DomainCrypto: Hashable, Codable {
     let name: String
     let symbol: String
     let slug: String
-    let usdPrice: DomainCurrency
+    let usdPrice: DomainPrice
     let tags: [String]
     let cmcRank: Int
     let circulatingSupply: Double

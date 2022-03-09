@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct CryptoToDomainMapper {
+struct RemoteCryptoToDataMapper {
     
-    let currencyToDomainMapper: CurrencyToDomainMapper
+    let remoteCurrencyToDataMapper: RemoteCurrencyToDataMapper
     
-    func transform(item: RemoteCrypto) -> DomainCrypto{
-        return DomainCrypto(
+    func transform(item: RemoteCrypto) -> DataCrypto{
+        return DataCrypto(
             id: item.cryptoId ?? 0,
             name: item.name ?? "",
             symbol: item.symbol ?? "",
             slug: item.slug ?? "",
-            usdPrice: currencyToDomainMapper.transform(item: item.quote?.usd),
+            usdPrice: remoteCurrencyToDataMapper.transform(item: item.quote?.usd),
             tags: item.tags ?? [],
             cmcRank: item.cmcRank ?? 0,
             circulatingSupply: item.circulatingSupply ?? 0.0,
