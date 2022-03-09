@@ -23,11 +23,11 @@
 		846963E727C5713D0031CF24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E627C5713D0031CF24 /* ErrorView.swift */; };
 		846963E927C57FD20031CF24 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963E827C57FD20031CF24 /* CryptoListViewModel.swift */; };
 		846963ED27C6C14B0031CF24 /* CryptoListUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846963EC27C6C14B0031CF24 /* CryptoListUIState.swift */; };
-		84CFD4C827CE6A5800AF1419 /* CryptoApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C727CE6A5800AF1419 /* CryptoApiRequest.swift */; };
-		84CFD4CA27CE6AD000AF1419 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C927CE6AD000AF1419 /* Crypto.swift */; };
-		84CFD4CC27CE6B0600AF1419 /* CryptoApiRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CB27CE6B0600AF1419 /* CryptoApiRequestStatus.swift */; };
-		84CFD4CE27CE793C00AF1419 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CD27CE793C00AF1419 /* Quote.swift */; };
-		84CFD4D027CE798F00AF1419 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CF27CE798F00AF1419 /* Currency.swift */; };
+		84CFD4C827CE6A5800AF1419 /* RemoteApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C727CE6A5800AF1419 /* RemoteApiRequest.swift */; };
+		84CFD4CA27CE6AD000AF1419 /* RemoteCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4C927CE6AD000AF1419 /* RemoteCrypto.swift */; };
+		84CFD4CC27CE6B0600AF1419 /* RemoteApiRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CB27CE6B0600AF1419 /* RemoteApiRequestStatus.swift */; };
+		84CFD4CE27CE793C00AF1419 /* RemoteQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CD27CE793C00AF1419 /* RemoteQuote.swift */; };
+		84CFD4D027CE798F00AF1419 /* RemoteCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4CF27CE798F00AF1419 /* RemoteCurrency.swift */; };
 		84CFD4D327CECF3F00AF1419 /* GetCryptoListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4D227CECF3F00AF1419 /* GetCryptoListUseCase.swift */; };
 		84CFD4D727CECFE800AF1419 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4D627CECFE800AF1419 /* AppError.swift */; };
 		84CFD4DC27D15A0800AF1419 /* CryptoRemoteSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4DB27D15A0800AF1419 /* CryptoRemoteSource.swift */; };
@@ -90,11 +90,11 @@
 		846963E827C57FD20031CF24 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 		846963EB27C6BFD70031CF24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		846963EC27C6C14B0031CF24 /* CryptoListUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListUIState.swift; sourceTree = "<group>"; };
-		84CFD4C727CE6A5800AF1419 /* CryptoApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApiRequest.swift; sourceTree = "<group>"; };
-		84CFD4C927CE6AD000AF1419 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		84CFD4CB27CE6B0600AF1419 /* CryptoApiRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApiRequestStatus.swift; sourceTree = "<group>"; };
-		84CFD4CD27CE793C00AF1419 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		84CFD4CF27CE798F00AF1419 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		84CFD4C727CE6A5800AF1419 /* RemoteApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApiRequest.swift; sourceTree = "<group>"; };
+		84CFD4C927CE6AD000AF1419 /* RemoteCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCrypto.swift; sourceTree = "<group>"; };
+		84CFD4CB27CE6B0600AF1419 /* RemoteApiRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApiRequestStatus.swift; sourceTree = "<group>"; };
+		84CFD4CD27CE793C00AF1419 /* RemoteQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteQuote.swift; sourceTree = "<group>"; };
+		84CFD4CF27CE798F00AF1419 /* RemoteCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCurrency.swift; sourceTree = "<group>"; };
 		84CFD4D227CECF3F00AF1419 /* GetCryptoListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoListUseCase.swift; sourceTree = "<group>"; };
 		84CFD4D627CECFE800AF1419 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		84CFD4DB27D15A0800AF1419 /* CryptoRemoteSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRemoteSource.swift; sourceTree = "<group>"; };
@@ -389,8 +389,8 @@
 		84CFD4DF27D15A7F00AF1419 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				84CFD4CB27CE6B0600AF1419 /* CryptoApiRequestStatus.swift */,
-				84CFD4C727CE6A5800AF1419 /* CryptoApiRequest.swift */,
+				84CFD4CB27CE6B0600AF1419 /* RemoteApiRequestStatus.swift */,
+				84CFD4C727CE6A5800AF1419 /* RemoteApiRequest.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -436,9 +436,9 @@
 			isa = PBXGroup;
 			children = (
 				84CFD4DF27D15A7F00AF1419 /* api */,
-				84CFD4C927CE6AD000AF1419 /* Crypto.swift */,
-				84CFD4CD27CE793C00AF1419 /* Quote.swift */,
-				84CFD4CF27CE798F00AF1419 /* Currency.swift */,
+				84CFD4C927CE6AD000AF1419 /* RemoteCrypto.swift */,
+				84CFD4CD27CE793C00AF1419 /* RemoteQuote.swift */,
+				84CFD4CF27CE798F00AF1419 /* RemoteCurrency.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -702,16 +702,16 @@
 				84CFD4D727CECFE800AF1419 /* AppError.swift in Sources */,
 				84CFD4D327CECF3F00AF1419 /* GetCryptoListUseCase.swift in Sources */,
 				84CFD4E427D15BE900AF1419 /* DomainCrypto.swift in Sources */,
-				84CFD4C827CE6A5800AF1419 /* CryptoApiRequest.swift in Sources */,
+				84CFD4C827CE6A5800AF1419 /* RemoteApiRequest.swift in Sources */,
 				84EFFFA227D7B44800D4FDEC /* CryptoRepository.swift in Sources */,
 				846963E927C57FD20031CF24 /* CryptoListViewModel.swift in Sources */,
 				84CFD4E927D16EA500AF1419 /* DomainCryptoToUIMapper.swift in Sources */,
 				84CFD4EB27D299F500AF1419 /* DomainCurrency.swift in Sources */,
 				84CFD4ED27D29AD700AF1419 /* CurrencyToDomainMapper.swift in Sources */,
-				84CFD4CC27CE6B0600AF1419 /* CryptoApiRequestStatus.swift in Sources */,
+				84CFD4CC27CE6B0600AF1419 /* RemoteApiRequestStatus.swift in Sources */,
 				84CFD4E627D16A5D00AF1419 /* CryptoToDomainMapper.swift in Sources */,
 				84597FA527C41456003E990E /* CryptoItemView.swift in Sources */,
-				84CFD4CA27CE6AD000AF1419 /* Crypto.swift in Sources */,
+				84CFD4CA27CE6AD000AF1419 /* RemoteCrypto.swift in Sources */,
 				846963E527C570980031CF24 /* LoadingView.swift in Sources */,
 				84CFD4DC27D15A0800AF1419 /* CryptoRemoteSource.swift in Sources */,
 				84597F9927C3E6D3003E990E /* CryptoListView.swift in Sources */,
@@ -719,8 +719,8 @@
 				84CFD4F127D2A60A00AF1419 /* DomainCurrencyToUIMapper.swift in Sources */,
 				84CFD4EF27D2A5C400AF1419 /* UICurrency.swift in Sources */,
 				846963E727C5713D0031CF24 /* ErrorView.swift in Sources */,
-				84CFD4D027CE798F00AF1419 /* Currency.swift in Sources */,
-				84CFD4CE27CE793C00AF1419 /* Quote.swift in Sources */,
+				84CFD4D027CE798F00AF1419 /* RemoteCurrency.swift in Sources */,
+				84CFD4CE27CE793C00AF1419 /* RemoteQuote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

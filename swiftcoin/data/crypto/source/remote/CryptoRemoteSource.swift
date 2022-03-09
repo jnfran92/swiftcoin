@@ -19,8 +19,8 @@ struct CryptoRemoteSource {
     func getLatestCryptoList() -> AnyPublisher<[DomainCrypto], AppError> {
         return AF.request(url, headers: headers)
             .validate()
-            .publishDecodable(type: CryptoApiRequest.self)
-            .tryMap{ dataResponse -> CryptoApiRequest in
+            .publishDecodable(type: RemoteApiRequest.self)
+            .tryMap{ dataResponse -> RemoteApiRequest in
                 if dataResponse.error != nil {
                     throw AppError.dataError(dataResponse.error?.errorDescription ?? "unknown error")
                 } else {

@@ -12,12 +12,7 @@ import UIKit
 
 struct CryptoLocalSource {
     
-    let realm = try! Realm()
-    
-    init(){
-        print("init Local Repo")
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-    }
+    let realm: Realm
     
     func addCrypto() {
         print("addCrypto")

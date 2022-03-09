@@ -8,13 +8,13 @@
 import Foundation
 
 
-struct Crypto: Decodable{
+struct RemoteCrypto: Decodable{
     
     let cryptoId: Int?
     let name: String?
     let symbol: String?
     let slug: String?
-    let quote: Quote?
+    let quote: RemoteQuote?
     let tags: [String]?
     let cmcRank: Int?
     let circulatingSupply: Double?

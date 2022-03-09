@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Quote: Decodable{
-    let usd: Currency?
+struct RemoteQuote: Decodable{
+    let usd: RemoteCurrency?
     
     enum CodingKeys: String, CodingKey {
         case usd = "USD"

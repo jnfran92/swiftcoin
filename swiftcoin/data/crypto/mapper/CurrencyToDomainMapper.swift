@@ -9,7 +9,7 @@ import Foundation
 
 struct CurrencyToDomainMapper {
     
-    func transform(item: Currency?) -> DomainCurrency{
+    func transform(item: RemoteCurrency?) -> DomainCurrency{
         if let itemNotNull = item{
             return DomainCurrency(
                 price: itemNotNull.price ?? 0.0,

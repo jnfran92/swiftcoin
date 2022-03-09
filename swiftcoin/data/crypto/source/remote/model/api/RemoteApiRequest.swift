@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct CryptoApiRequest: Decodable {
-    let status: CryptoApiRequestStatus?
-    let data: [Crypto]?
+struct RemoteApiRequest: Decodable {
+    let status: RemoteApiRequestStatus?
+    let data: [RemoteCrypto]?
     
     enum CodingKeys: String, CodingKey {
         case status = "status"

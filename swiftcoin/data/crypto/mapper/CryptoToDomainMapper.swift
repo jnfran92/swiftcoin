@@ -11,7 +11,7 @@ struct CryptoToDomainMapper {
     
     let currencyToDomainMapper: CurrencyToDomainMapper
     
-    func transform(item: Crypto) -> DomainCrypto{
+    func transform(item: RemoteCrypto) -> DomainCrypto{
         return DomainCrypto(
             id: item.cryptoId ?? 0,
             name: item.name ?? "",

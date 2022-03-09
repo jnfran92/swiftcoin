@@ -8,14 +8,17 @@
 import Foundation
 import Alamofire
 import Combine
+import RealmSwift
 
 struct GetCryptoListUseCase {
     
-   let cryptoRemoteRepository: CryptoRemoteSource
+    let cryptoRemoteRepository: CryptoRemoteSource
+    let realm = try! Realm()
     
     func invoke() -> AnyPublisher<[DomainCrypto], AppError> {
         
-        let local = CryptoLocalSource()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let local = CryptoLocalSource(realm: realm)
         local.addCrypto()
         local.getCryptoList()
         

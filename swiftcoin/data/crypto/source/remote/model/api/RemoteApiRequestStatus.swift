@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CryptoApiRequestStatus: Decodable {
+struct RemoteApiRequestStatus: Decodable {
     let errorCode:Int?
     
     enum CodingKeys: String, CodingKey {
