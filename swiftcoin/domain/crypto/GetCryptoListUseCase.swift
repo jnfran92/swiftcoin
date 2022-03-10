@@ -13,16 +13,14 @@ import RealmSwift
 struct GetCryptoListUseCase {
     
     let cryptoRepository: CryptoRepository
-    let realm = try! Realm()
+//    let realm = try! Realm()
+    
     
     func invoke() -> AnyPublisher<[DomainCrypto], AppError> {
-        
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        let local = CryptoLocalSource(realm: realm)
-        local.addCrypto()
-        local.getCryptoList()
-        
-        
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        let local = CryptoLocalSource(realm: realm)
+//        local.addCrypto()
+//        local.getCryptoList()
         return self.cryptoRepository
             .getCryptoList()
     }

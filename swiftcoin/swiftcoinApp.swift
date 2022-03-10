@@ -9,8 +9,10 @@ import SwiftUI
 
 @main
 struct swiftcoinApp: App {
+        
     var body: some Scene {
         WindowGroup {
+        
             let domainCurrencyToUIMapper = DomainCurrencyToUIMapper()
             let domainCryptoToUIMapper = DomainCryptoToUIMapper(domainCurrencyToUIMapper: domainCurrencyToUIMapper)
             
@@ -24,8 +26,11 @@ struct swiftcoinApp: App {
             let dataPriceToDomainMapper = DataPriceToDomainMapper()
             let dataCryptoToDomainMapper = DataCryptoToDomainMapper(dataPriceToDomainMapper: dataPriceToDomainMapper)
             
+            
+            let cryptoLocalSource = CryptoLocalSource()
+            
             let cryptoRepository = CryptoRepository(
-                cryptoRemoteSource: cryptoRemoteSource,
+                cryptoRemoteSource: cryptoRemoteSource, cryptoLocalSource: cryptoLocalSource,
                 dataCryptoToDomainMapper: dataCryptoToDomainMapper)
             
             let getCryptoListUseCase = GetCryptoListUseCase(cryptoRepository: cryptoRepository)

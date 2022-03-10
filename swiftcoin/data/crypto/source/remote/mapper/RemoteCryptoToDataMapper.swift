@@ -12,6 +12,7 @@ struct RemoteCryptoToDataMapper {
     let remoteCurrencyToDataMapper: RemoteCurrencyToDataMapper
     
     func transform(item: RemoteCrypto) -> DataCrypto{
+        print("transform \(item)")
         return DataCrypto(
             id: item.cryptoId ?? 0,
             name: item.name ?? "",
