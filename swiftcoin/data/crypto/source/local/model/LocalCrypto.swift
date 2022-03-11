@@ -11,7 +11,7 @@ import RealmSwift
 
 class LocalCrypto: Object {
     @Persisted(primaryKey: true) var _id: ObjectId
-//    @Persisted let cryptoId: Int?
+    @Persisted var remoteId: Int
     @Persisted var name: String
     @Persisted var symbol: String
     @Persisted var slug: String

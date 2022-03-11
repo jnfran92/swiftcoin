@@ -26,8 +26,8 @@ struct swiftcoinApp: App {
             let dataPriceToDomainMapper = DataPriceToDomainMapper()
             let dataCryptoToDomainMapper = DataCryptoToDomainMapper(dataPriceToDomainMapper: dataPriceToDomainMapper)
             
-            
-            let cryptoLocalSource = CryptoLocalSource()
+            let localCryptoToDataMapper = LocalCryptoToDataMapper()
+            let cryptoLocalSource = CryptoLocalSource(localCryptoToDataMapper: localCryptoToDataMapper)
             
             let cryptoRepository = CryptoRepository(
                 cryptoRemoteSource: cryptoRemoteSource, cryptoLocalSource: cryptoLocalSource,

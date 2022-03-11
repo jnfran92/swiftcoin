@@ -32,7 +32,7 @@ struct CryptoRemoteSource {
             }
             .eraseToAnyPublisher()
             .map { cryptoApiRequest -> [DataCrypto] in
-                return cryptoApiRequest.data?.map {self.remoteCryptoToDataMapper.transform(item: $0)} ?? []
+                return cryptoApiRequest.data?.map (self.remoteCryptoToDataMapper.transform) ?? []
             }
             .eraseToAnyPublisher()
     }

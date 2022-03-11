@@ -40,6 +40,7 @@
 		84CFD4EF27D2A5C400AF1419 /* UICurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4EE27D2A5C400AF1419 /* UICurrency.swift */; };
 		84CFD4F127D2A60A00AF1419 /* DomainCurrencyToUIMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4F027D2A60A00AF1419 /* DomainCurrencyToUIMapper.swift */; };
 		84CFD4F527D65B7400AF1419 /* PriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFD4F427D65B7400AF1419 /* PriceChartView.swift */; };
+		84EB1F1527DBA3C2007237BA /* LocalCryptoToDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1F1427DBA3C2007237BA /* LocalCryptoToDataMapper.swift */; };
 		84EFFF9927D6BE2400D4FDEC /* LocalCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFFF9827D6BE2400D4FDEC /* LocalCrypto.swift */; };
 		84EFFF9D27D7B2D500D4FDEC /* LocalPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFFF9C27D7B2D500D4FDEC /* LocalPrice.swift */; };
 		84EFFFA227D7B44800D4FDEC /* CryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFFFA127D7B44800D4FDEC /* CryptoRepository.swift */; };
@@ -111,6 +112,7 @@
 		84CFD4EE27D2A5C400AF1419 /* UICurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICurrency.swift; sourceTree = "<group>"; };
 		84CFD4F027D2A60A00AF1419 /* DomainCurrencyToUIMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainCurrencyToUIMapper.swift; sourceTree = "<group>"; };
 		84CFD4F427D65B7400AF1419 /* PriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartView.swift; sourceTree = "<group>"; };
+		84EB1F1427DBA3C2007237BA /* LocalCryptoToDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCryptoToDataMapper.swift; sourceTree = "<group>"; };
 		84EFFF9827D6BE2400D4FDEC /* LocalCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCrypto.swift; sourceTree = "<group>"; };
 		84EFFF9C27D7B2D500D4FDEC /* LocalPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPrice.swift; sourceTree = "<group>"; };
 		84EFFFA127D7B44800D4FDEC /* CryptoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRepository.swift; sourceTree = "<group>"; };
@@ -414,9 +416,18 @@
 			path = mapper;
 			sourceTree = "<group>";
 		};
+		84EB1F1327DBA38B007237BA /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				84EB1F1427DBA3C2007237BA /* LocalCryptoToDataMapper.swift */,
+			);
+			path = mapper;
+			sourceTree = "<group>";
+		};
 		84EFFF9727D6BE0900D4FDEC /* local */ = {
 			isa = PBXGroup;
 			children = (
+				84EB1F1327DBA38B007237BA /* mapper */,
 				84EFFFAE27D8F19100D4FDEC /* model */,
 				84CFD4E127D15B1D00AF1419 /* CryptoLocalSource.swift */,
 			);
@@ -750,6 +761,7 @@
 				84CFD4E227D15B1D00AF1419 /* CryptoLocalSource.swift in Sources */,
 				84CFD4F127D2A60A00AF1419 /* DomainCurrencyToUIMapper.swift in Sources */,
 				84CFD4EF27D2A5C400AF1419 /* UICurrency.swift in Sources */,
+				84EB1F1527DBA3C2007237BA /* LocalCryptoToDataMapper.swift in Sources */,
 				846963E727C5713D0031CF24 /* ErrorView.swift in Sources */,
 				84CFD4D027CE798F00AF1419 /* RemoteCurrency.swift in Sources */,
 				84CFD4CE27CE793C00AF1419 /* RemoteQuote.swift in Sources */,
